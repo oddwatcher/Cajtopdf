@@ -63,9 +63,9 @@ class CAJParser(object):
                 self.format = "TEB"
             else:
                 self.format = None
-                raise SystemExit("Unknown file type.")
+                raise Exception("Unknown file type.")
         except UnicodeDecodeError:
-            raise SystemExit("Unknown file type.")
+            raise Exception("Unknown file type.")
 
     @property
     def page_num(self):
